@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: a39ee82c8f5751b4d97d6c6091de1602
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BackWallMesh
+    100002: BackWallMesh1
+    100004: Button_Exit
+    100006: CeilsMesh
+    100008: Crate_mesh
+    100010: Door_Frame_mesh
+    100012: DoorShape_mesh
+    100014: Elevator_Door_01_mesh
+    100016: Elevator_Door_02_mesh
+    100018: Elevator_Door_03_mesh
+    100020: Elevator_Door_04
+    100022: Elevator_Wall_mesh
+    100024: Elevatorbackground_mesh
+    100026: ground
+    100028: InfectedWorm_mesh
+    100030: Ladder_mesh
+    100032: LadderSteps_mesh
+    100034: Land2
+    100036: Lap_Wall_mesh
+    100038: SideWall_mesh
+    100040: //RootNode
+    100042: WindowFrame_mesh
+    400000: BackWallMesh
+    400002: BackWallMesh1
+    400004: Button_Exit
+    400006: CeilsMesh
+    400008: Crate_mesh
+    400010: Door_Frame_mesh
+    400012: DoorShape_mesh
+    400014: Elevator_Door_01_mesh
+    400016: Elevator_Door_02_mesh
+    400018: Elevator_Door_03_mesh
+    400020: Elevator_Door_04
+    400022: Elevator_Wall_mesh
+    400024: Elevatorbackground_mesh
+    400026: ground
+    400028: InfectedWorm_mesh
+    400030: Ladder_mesh
+    400032: LadderSteps_mesh
+    400034: Land2
+    400036: Lap_Wall_mesh
+    400038: SideWall_mesh
+    400040: //RootNode
+    400042: WindowFrame_mesh
+    2100000: BackWall
+    2100002: Ladder
+    2100004: LadderSteps
+    2100006: SideWall
+    2100008: Crate
+    2100010: Lap_Wall
+    2100012: DoorShape
+    2100014: DoorFrame
+    2100016: WindowFrame
+    2100018: Emergenycy_button
+    2100020: InfectedWorm
+    2100022: Elevator_Door4
+    2100024: Elevator_WallShape
+    2100026: Elevator_Door1
+    2100028: Elevator_Door2
+    2100030: Land02
+    2100032: Elevatorbackground
+    2100034: Elevator_Door3
+    2100036: Ceils
+    2100038: Land01
+    2100040: BackWall_02
+    2100042: Elevator_Door5
+    2300000: BackWallMesh
+    2300002: BackWallMesh1
+    2300004: Button_Exit
+    2300006: CeilsMesh
+    2300008: Crate_mesh
+    2300010: Door_Frame_mesh
+    2300012: DoorShape_mesh
+    2300014: Elevator_Door_01_mesh
+    2300016: Elevator_Door_02_mesh
+    2300018: Elevator_Door_03_mesh
+    2300020: Elevator_Door_04
+    2300022: Elevator_Wall_mesh
+    2300024: Elevatorbackground_mesh
+    2300026: ground
+    2300028: InfectedWorm_mesh
+    2300030: Ladder_mesh
+    2300032: LadderSteps_mesh
+    2300034: Land2
+    2300036: Lap_Wall_mesh
+    2300038: SideWall_mesh
+    2300040: WindowFrame_mesh
+    3300000: BackWallMesh
+    3300002: BackWallMesh1
+    3300004: Button_Exit
+    3300006: CeilsMesh
+    3300008: Crate_mesh
+    3300010: Door_Frame_mesh
+    3300012: DoorShape_mesh
+    3300014: Elevator_Door_01_mesh
+    3300016: Elevator_Door_02_mesh
+    3300018: Elevator_Door_03_mesh
+    3300020: Elevator_Door_04
+    3300022: Elevator_Wall_mesh
+    3300024: Elevatorbackground_mesh
+    3300026: ground
+    3300028: InfectedWorm_mesh
+    3300030: Ladder_mesh
+    3300032: LadderSteps_mesh
+    3300034: Land2
+    3300036: Lap_Wall_mesh
+    3300038: SideWall_mesh
+    3300040: WindowFrame_mesh
+    4300000: BackWallMesh
+    4300002: Ladder_mesh
+    4300004: LadderSteps_mesh
+    4300006: SideWall_mesh
+    4300008: Crate_mesh
+    4300010: Lap_Wall_mesh
+    4300012: DoorShape_mesh
+    4300014: Door_Frame_mesh
+    4300016: WindowFrame_mesh
+    4300018: Button_Exit
+    4300020: InfectedWorm_mesh
+    4300022: Elevator_Door_04
+    4300024: Elevator_Wall_mesh
+    4300026: Elevator_Door_01_mesh
+    4300028: Elevator_Door_02_mesh
+    4300030: Land2
+    4300032: Elevatorbackground_mesh
+    4300034: Elevator_Door_03_mesh
+    4300036: CeilsMesh
+    4300038: ground
+    4300040: BackWallMesh1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BackWall
+    second: {fileID: 2100000, guid: 99e2cfac8d6a3874e9720a95d79d3769, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BackWall_02
+    second: {fileID: 2100000, guid: 7bc80a979b261ec42b8ef8f9e574afd7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ceils
+    second: {fileID: 2100000, guid: f5cacd0ef5717e245a7273eae0ade15b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Crate
+    second: {fileID: 2100000, guid: 15b31d54a7f77224d97cdfd609b307e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorFrame
+    second: {fileID: 2100000, guid: 20be90db833f6b244a18fc5d08ed7d15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorShape
+    second: {fileID: 2100000, guid: de843b7603cb03046a72c6efd5c0645e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Elevator_Door1
+    second: {fileID: 2100000, guid: d814d3e3cd7991149bc0b9ad78c42baa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Elevator_Door2
+    second: {fileID: 2100000, guid: 1aaef6ef750207f4dbb774f7516724bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Elevator_Door3
+    second: {fileID: 2100000, guid: 7f7a93bc545a20340b8b40bfde8519fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Elevator_Door4
+    second: {fileID: 2100000, guid: e30bed17c78686445823395781d2b8f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Elevator_WallShape
+    second: {fileID: 2100000, guid: 67484f39c441e454998a4d544ce4ca9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Elevatorbackground
+    second: {fileID: 2100000, guid: 37a1a4b21b1f67a4cb2856377f934bae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Emergenycy_button
+    second: {fileID: 2100000, guid: e8b23965352b372489761e9af70f477b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: InfectedWorm
+    second: {fileID: 2100000, guid: eaf6849ab89a42d4c85902312e83a422, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ladder
+    second: {fileID: 2100000, guid: f81b533fbe2c5d74bbcbf7120a5fe303, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LadderSteps
+    second: {fileID: 2100000, guid: ff178c5ba18705040b17f89a3b797386, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Land01
+    second: {fileID: 2100000, guid: deb49cc45dfb3184baac3f52b4d54191, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Land02
+    second: {fileID: 2100000, guid: 5c7ff0be8000613408fcb6ff47c80344, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lap_Wall
+    second: {fileID: 2100000, guid: ec63239a512b09e4caa751fad22c04fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SideWall
+    second: {fileID: 2100000, guid: 67cc0f1b16ef93143b9ba62258dbe247, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WindowFrame
+    second: {fileID: 2100000, guid: 921b89d54beb8e74d9f1a79c4a6d3a15, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
