@@ -6,6 +6,7 @@ Daydream Shooter game prototype
 ###### Enemy Class
 Its parent class where most of the core properties of the enemy are exist.
 Some of the Functions :
+
 1. Awake 
 2. Update 
 3. RecieveDamage 
@@ -17,6 +18,7 @@ Some of the Functions :
 ###### Weapon Class
 Parent class for Weapons carry alot of common properties between weapons types such as recoil, AmmoClipSize..etc
 Some of the Functions :
+
 1. Awake
 2. Update
 3. Fire
