@@ -15,6 +15,8 @@
 Shader "GoogleVR/Unlit/Texture Overlay" {
   Properties {
     _MainTex ("Base (RGB)", 2D) = "white" {}
+    _EmissiveTex("Glow Map",2D) = "white" {}
+     [HDR]_ColorEmissive ("Tint", Color) = (1,1,1,1)
   }
 
   SubShader {
@@ -42,21 +44,28 @@ Shader "GoogleVR/Unlit/Texture Overlay" {
       };
 
       sampler2D _MainTex;
-      float4 _MainTex_ST;
+      sampler2D _EmissiveTex;
+     
+      float4 _MainTex_ST;      
+      float4 _ColorEmissive;
 
       v2f vert (appdata_t v) {
         v2f o;
         o.vertex = UnityObjectToClipPos(v.vertex);
-        o.texcoord = TRANSFORM_TEX(v.texcoord, _MainTex);
+        o.texcoord = TRANSFORM_TEX(v.texcoord, _MainTex );
+        
         UNITY_TRANSFER_FOG(o,o.vertex);
         return o;
       }
 
       fixed4 frag (v2f i) : SV_Target {
         fixed4 col = tex2D(_MainTex, i.texcoord);
-        UNITY_APPLY_FOG(i.fogCoord, col);
-        UNITY_OPAQUE_ALPHA(col.a);
-        return col;
+        fixed4 col2 = tex2D(_EmissiveTex, i.texcoord) * _ColorEmissive;
+        
+        fixed4 col3 = col + col2;
+        UNITY_APPLY_FOG(i.fogCoord, col3);
+        UNITY_OPAQUE_ALPHA(col3.a);
+        return col3;
       }
       ENDCG
     }
