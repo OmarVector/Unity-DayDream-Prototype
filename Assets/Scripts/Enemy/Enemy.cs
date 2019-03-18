@@ -1,62 +1,64 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class Enemy : MonoBehaviour
 {
-    protected string enemyName;
-    private int health;
-    private int damage;
-    private Transform goTransform;
-    private Player player;
-    private bool isAttacking;
-    private Material enemyMaterial;
+    protected string enemyName; // Enemy Name
+    private int health; // Enemy Health
+    private int damage; // Enemy Damage
+    private Transform goTransform; // Transfrom so I force enemy to loot at player
+    private Player player; // Reference to player class to do damage once they hit 
+    private bool isAttacking; // Checking if Enemy is attacking
+    private Material enemyMaterial;  // Enemy Material which I use to change the glow color based on how tough they are.
 
-    [HideInInspector] public EnemySpawner Spawner;
-    [HideInInspector] private int defaultHealth;
+    [HideInInspector] public EnemySpawner Spawner; // Spawner 
+    [HideInInspector] private int defaultHealth; // Storing health to be reset once its recycled through Object pool
 
 
     protected virtual void Awake()
     {
+        // Caching
         goTransform = gameObject.transform;
         enemyMaterial = gameObject.transform.GetChild(0).gameObject.GetComponent<SkinnedMeshRenderer>().material;
     }
 
 
-// Called when Game Level Difficulty is updated
+// Called when Game Level Difficulty is updated or Enemy is Loaded
     public void SetEnemyPower(int eHealth, int eDamage, Color eColor, int level)
     {
         health = eHealth * level;
         damage = eDamage * level;
         enemyMaterial.SetColor("_ColorEmissive", eColor); //not best approche anyway
+        defaultHealth = health;
     }
 
 
+    // Keep looking to player
     private void Update()
     {
         goTransform.LookAt(Camera.main.transform);
         goTransform.rotation = new Quaternion(0, transform.rotation.y, 0, 1);
     }
 
+    // Receive Damage from player
     public void ReceiveDamage(int damage)
     {
         health -= damage;
         if (health <= 0)
         {
-            // void DeadEnemy() any logic related to dead enemy;
             OnDeath();
-            //Adding Scrore 
-            //Destory
         }
     }
 
     protected virtual void OnDeath()
     {
-        Spawner.ReturnEnemyToPool(gameObject);
-        var level = ScoreManager.scoreManager.LevelDiff;
-        health = defaultHealth * level;
+        Spawner.ReturnEnemyToPool(gameObject); // returning to pool
+        var level = ScoreManager.scoreManager.LevelDiff; // getting diff level
+        health = defaultHealth * level; //resenting health with the new diff level
+       Debug.Log(health);
+        // cancel invoking
         CancelInvoke(nameof(DoDamage));
         
+        // Setting Emassive color of the enemy based on the diff. level
         switch (level)
         {
             case 1:
@@ -84,13 +86,11 @@ public class Enemy : MonoBehaviour
         ScoreManager.scoreManager.Score += 100;
     }
 
-
-    protected virtual void OnEnable()
-    {
-        defaultHealth = health;
-    }
-
-
+    
+    
+    
+    
+// DO Damage is repeatedly invoked when the enemy collide with player
     private void DoDamage()
     {
         player.ReceiveDamage(damage);
@@ -100,6 +100,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
+// I believe this part could be much better in term of design , 
     private void OnCollisionEnter(Collision other)
     {
         if (other.collider.gameObject.GetComponent<Player>())
@@ -122,7 +123,7 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionExit(Collision other)
     {
-        if (other.collider.gameObject.name == "Player")
+        if (other.collider.gameObject.name == "Player") // I would believe it could be another way than comparing two strings . 
         {
             isAttacking = false;
 

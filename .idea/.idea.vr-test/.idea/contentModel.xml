@@ -262,15 +262,21 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="BossMinions.cs" t="Include" />
-          <e p="Enemy.cs" t="Include" />
-          <e p="GettingGun.cs" t="Include" />
-          <e p="HelperClass.cs" t="Include" />
-          <e p="MP5.cs" t="Include" />
+          <e p="Enemy" t="Include">
+            <e p="BossMinions.cs" t="Include" />
+            <e p="Enemy.cs" t="Include" />
+          </e>
+          <e p="Helper Scripts" t="Include">
+            <e p="HelperClass.cs" t="Include" />
+            <e p="ShowFPS.cs" t="Include" />
+          </e>
           <e p="Player.cs" t="Include" />
           <e p="ScoreManager.cs" t="Include" />
-          <e p="ShowFPS.cs" t="Include" />
-          <e p="Weapon.cs" t="Include" />
+          <e p="Weapons" t="Include">
+            <e p="GettingGun.cs" t="Include" />
+            <e p="MP5.cs" t="Include" />
+            <e p="Weapon.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

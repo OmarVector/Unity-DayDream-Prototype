@@ -2,9 +2,10 @@
 
 public class BossMinions : Enemy
 {
-    // dealing with our custom animator
+    // dealing with our custom animator , //quite hard coded animation
     private Animator anim;
     
+    //overriding Awake Function just cach the animator on Awake
     protected override void Awake()
     {
         base.Awake();
@@ -12,15 +13,16 @@ public class BossMinions : Enemy
         enemyName = "Boss Minion";
     }
     
+    //overriding OnDeath to disable the animator
     protected override void OnDeath()
     {
        base.OnDeath();
-        anim.enabled = false;
+       anim.enabled = false;
     }
 
-    protected override void OnEnable()
+    private void OnEnable()
     {
-       base.OnEnable();
+        //Hardcoded animation just to give the feel
         anim.enabled = true;
         anim.Play("Take 001");
     }

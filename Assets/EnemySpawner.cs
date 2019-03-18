@@ -2,19 +2,20 @@
 using UnityEngine;
 using static HelperClass;
 
+////////////////////////////////////////////
+/// EnemySpawner Weapon Class
+/// ////////////////////////////////////////
+
 public class EnemySpawner : MonoBehaviour
 {
-    static int POOLSIZE = 20;
+    static int POOLSIZE = 20; // Enemy Pool Size
     
-    [SerializeField] private GameObject EnemyGO;
-    [HideInInspector] public List<GameObject> EnemyPool;
+    [SerializeField] private GameObject EnemyGO; // Enemy Prefab we going to use to instantiate .
+    [HideInInspector] public List<GameObject> EnemyPool; // Enemy Pool List
     
-    public float SpawningRate = 5f;
+    public float SpawningRate = 2.5f; 
     private int basicHealth = 100;
     private int basicDamage = 50;
-
-    private int difficultly = 1; // max 10
-    
     
 
     private void Awake()
@@ -24,6 +25,7 @@ public class EnemySpawner : MonoBehaviour
     }
     
 
+    // Initializing Pool
     private void InitializeEnemyPool()
     {
         for (int i = 0; i < POOLSIZE; ++i)
@@ -31,13 +33,14 @@ public class EnemySpawner : MonoBehaviour
             var go = Instantiate(EnemyGO, transform.position, Quaternion.identity);
             go.SetActive(false);
             var GoEnemy = go.GetComponent<Enemy>();
-            GoEnemy.SetEnemyPower(basicHealth,basicDamage,Color.blue, difficultly);
+            GoEnemy.SetEnemyPower(basicHealth,basicDamage,Color.blue, ScoreManager.scoreManager.LevelDiff);
             GoEnemy.Spawner = this;
             EnemyPool.Add(go);
         }
         
     }
 
+    
     private void GetEnemyFromPool()
     {
         for (int i = 0; i < POOLSIZE; ++i)

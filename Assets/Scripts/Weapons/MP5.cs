@@ -1,15 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+////////////////////////////////////////////
+/// MP5 Weapon Class
+/// ////////////////////////////////////////
 public class MP5 : Weapon
 {
-    [SerializeField] private ParticleSystem part;
+    [SerializeField] private ParticleSystem part; // firing particles
     // Start is called before the first frame update
     void Start()
     {
         openFireParticles = part;
-        Weaponname = "MP5";
+        weaponName = "MP5";
         ammoClipSize = 30;
         ammo = ammoClipSize;
         damage = 10;
@@ -26,5 +27,5 @@ public class MP5 : Weapon
         base.UpgradeWeapon();
     }
 
-//we can override any fucntion we want here to add more feature per weapon.
+
 }

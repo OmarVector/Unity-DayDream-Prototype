@@ -1,33 +1,35 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
+////////////////////////////////////////////
+/// GettingGun Weapon Class
+/// ////////////////////////////////////////
 
 public class GettingGun : Weapon
 {
-    [SerializeField] private Transform gunRotation;
-    [SerializeField] private ParticleSystem part;
+    [SerializeField] private Transform gunRotation; // transform to rotate the Getting Gun
+    [SerializeField] private ParticleSystem part; // firing particles
 
-    private float rotatingAngle;
+    private float rotatingAngle; //  rotation amount
 
     private float lerpAmount;
 
     // Start is called before the first frame update
     void Start()
     {
-        openFireParticles = part;
-
-        Weaponname = "Getting Gun";
+        weaponName = "Getting Gun";
         ammoClipSize = 200;
         ammo = ammoClipSize;
         damage = 10;
         fireRate = 0.05f;
+        openFireParticles = part;
     }
 
     // Update is called once per frame
     protected override void Update()
     {
         base.Update();
+        
+        // Hardcoding rotating animation of the getting gun
         if (isFiring)
         {
             lerpAmount = 0;
@@ -44,6 +46,7 @@ public class GettingGun : Weapon
         }
     }
 
+    //Upgrading TODO UI
     public override void UpgradeWeapon()
     {
         damage *= 3;

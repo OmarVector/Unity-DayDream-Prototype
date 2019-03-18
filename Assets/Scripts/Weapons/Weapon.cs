@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    protected string Weaponname { get; set; }
+    protected string weaponName { get; set; } 
     protected int damage { get; set; }
-    protected int accuracy { get; set; }
-    protected int recoil { get; set; }
+    protected int accuracy { get; set; } //Not used but added
+    protected int recoil { get; set; }//Not used but added
     protected float fireRate { get; set; }
-    protected float reloadSpeed { get; set; }
+    protected float reloadSpeed { get; set; }//Not used but added
     protected int ammoClipSize { get; set; }
     protected int ammo { get; set; }
     protected bool isFiring;
-    protected Material weaponMat;
-    protected int UpgradeCost;
+    protected int UpgradeCost; // TODO
     protected ParticleSystem openFireParticles;
+    
+    private Material weaponMat;
+    //to avoid GC
+    private Ray ray;
+    private RaycastHit hit;
 
+
+    // enum power level of the weapon. 
     public enum Levels
     {
         Level_01 = 1,
@@ -26,11 +32,11 @@ public class Weapon : MonoBehaviour
         Level_05 = 5
     }
 
-    protected Levels WeaponLevel;
+    protected Levels WeaponLevel; // TODO
 
     private int layer_mask;
 
-    // it can be extended as much as we want, like adding audio as well. attachments ..etc
+    
     private void Awake()
     {
         layer_mask = LayerMask.GetMask("EnemyLayer");
@@ -38,13 +44,12 @@ public class Weapon : MonoBehaviour
 
     }
 
-    private Ray ray;
-    private RaycastHit hit;
-
+    // Virtual just if at any case we want to override thie per weapon.
     protected virtual void Fire()
     {
         if (ammo > 0)
         {
+            //fire ray from center of the screen
             ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
             Debug.DrawRay(ray.origin, ray.direction, Color.green, 5);
 
@@ -58,10 +63,11 @@ public class Weapon : MonoBehaviour
         }
         else
         {
-            Debug.Log("Reload");
+            Debug.Log("Reload please"); //TODO Adding UI
         }
     }
 
+    // OpenFire system "quite primitive" I could make a seprate controller , but it's not necessary at our case here
     protected virtual void Update()
     {
 #if UNITY_EDITOR
@@ -80,10 +86,10 @@ public class Weapon : MonoBehaviour
             isFiring = false;
             openFireParticles.Stop();
         }
-
+        return;
 #endif
 
-/*#if UNITY_ANDROID || UNITY_IOS
+#if UNITY_ANDROID
         if (Input.touchCount > 0)
         {
             if (!isFiring)
@@ -97,14 +103,16 @@ public class Weapon : MonoBehaviour
             CancelInvoke("Fire");
             isFiring = false;
         }
-#endif*/
+#endif
     }
 
+    // Reloading //TODO UI Button
     public void Reload()
     {
         ammo = ammoClipSize;
     }
 
+    //TODO Upgrading Weapon UI
     public virtual void UpgradeWeapon()
     {
         WeaponLevel++;

@@ -2,16 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="611ff5c2-bacd-4639-8340-b398e5d4e3b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/GoogleVR/Shaders/GvrUnlitTextureOverlay.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GoogleVR/Shaders/GvrUnlitTextureOverlay.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/CyberDemon/Cyber Demon Animator Controler.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/CyberDemon/Cyber Demon Animator Controler.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/CyberDemon/CyberDemon Animation.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/CyberDemon/CyberDemon Animation.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/CyberDemon/CyberDemon_mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/CyberDemon/CyberDemon_mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/VR Enviro.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/VR Enviro.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/materials/InfectedWorm.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/materials/InfectedWorm.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Demons Attack.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Demons Attack.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.vr-test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.vr-test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossMinions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BossMinions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GettingGun.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GettingGun.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HelperClass.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HelperClass.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MP5.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MP5.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShowFPS.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShowFPS.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Getting Gun Weapon Particles Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Getting Gun Weapon Particles Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/MP5 Weapon Particles Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/MP5 Weapon Particles Mat.mat.meta" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,124 +33,36 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/EnemySpawner.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="33" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="33" />
+            <state relative-caret-position="321">
+              <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
               <folding>
-                <marker date="1552893205632" expanded="true" signature="6:78" ph="..." />
-                <marker date="1552893205632" expanded="true" signature="114:3357" ph="{...}" />
-                <marker date="1552893205632" expanded="true" signature="462:632" ph="{...}" />
-                <marker date="1552893205632" expanded="true" signature="763:928" ph="{...}" />
-                <marker date="1552893205632" expanded="true" signature="956:1097" ph="{...}" />
-                <marker date="1552893205632" expanded="true" signature="1140:1362" ph="{...}" />
-                <marker date="1552893205632" expanded="true" signature="1197:1356" ph="{...}" />
-                <marker date="1552893205632" expanded="true" signature="1308:1346" ph="/* Adding Scrore ... */" />
-                <marker date="1552893205632" expanded="true" signature="1400:2376" ph="{...}" />
-                <marker date="1552893205632" expanded="true" signature="1622:2321" ph="{...}" />
-                <marker date="1552893205632" expanded="true" signature="2416:2460" ph="{...}" />
-                <marker date="1552893205632" expanded="true" signature="2490:2631" ph="{...}" />
-                <marker date="1552893205632" expanded="true" signature="2561:2625" ph="{...}" />
-                <marker date="1552893205632" expanded="true" signature="2683:3104" ph="{...}" />
-                <marker date="1552893205632" expanded="true" signature="2751:3098" ph="{...}" />
-                <marker date="1552893205632" expanded="true" signature="2863:2939" ph="{...}" />
-                <marker date="1552893205632" expanded="true" signature="2970:3055" ph="{...}" />
-                <marker date="1552893205632" expanded="true" signature="3156:3355" ph="{...}" />
-                <marker date="1552893205632" expanded="true" signature="3218:3349" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/BossMinions.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-              <folding>
-                <marker date="1552885959061" expanded="true" signature="52:527" ph="{...}" />
-                <marker date="1552885959061" expanded="true" signature="162:272" ph="{...}" />
-                <marker date="1552885959061" expanded="true" signature="315:380" ph="{...}" />
-                <marker date="1552885959061" expanded="true" signature="420:516" ph="{...}" />
+                <marker date="1552899679241" expanded="true" signature="6:78" ph="..." />
+                <marker date="1552899679241" expanded="true" signature="125:199" ph="/// EnemySpawner Weapon Class ... " />
+                <marker date="1552899679241" expanded="true" signature="242:1750" ph="{...}" />
+                <marker date="1552899679241" expanded="true" signature="616:719" ph="{...}" />
+                <marker date="1552899679241" expanded="true" signature="789:1217" ph="{...}" />
+                <marker date="1552899679241" expanded="true" signature="838:1202" ph="{...}" />
+                <marker date="1552899679241" expanded="true" signature="1259:1605" ph="{...}" />
+                <marker date="1552899679241" expanded="true" signature="1308:1599" ph="{...}" />
+                <marker date="1552899679241" expanded="true" signature="1367:1589" ph="{...}" />
+                <marker date="1552899679241" expanded="true" signature="1655:1748" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Weapon.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossMinions.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="165">
+              <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
               <folding>
-                <marker date="1552894181423" expanded="true" signature="57:3389" ph="{...}" />
-                <marker date="1552894181423" expanded="true" signature="561:682" ph="{...}" />
-                <marker date="1552894181423" expanded="true" signature="863:1033" ph="{...}" />
-                <marker date="1552894181423" expanded="true" signature="1118:1642" ph="{...}" />
-                <marker date="1552894181423" expanded="true" signature="1146:1570" ph="{...}" />
-                <marker date="1552894181423" expanded="true" signature="1369:1539" ph="{...}" />
-                <marker date="1552894181423" expanded="true" signature="1583:1636" ph="{...}" />
-                <marker date="1552894181423" expanded="true" signature="1679:2428" ph="{...}" />
-                <marker date="1552894181423" expanded="true" signature="1739:1943" ph="{...}" />
-                <marker date="1552894181423" expanded="true" signature="1776:1933" ph="{...}" />
-                <marker date="1552894181423" expanded="true" signature="1956:2078" ph="{...}" />
-                <marker date="1552894181423" expanded="true" signature="2088:2422" ph="/* ##if UNITY_ANDROID || UNITY_IOS ... */" />
-                <marker date="1552894181423" expanded="true" signature="2454:2495" ph="{...}" />
-                <marker date="1552894181423" expanded="true" signature="2536:3387" ph="{...}" />
-                <marker date="1552894181423" expanded="true" signature="2601:3381" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/MP5.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" column="33" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="33" />
-              <folding>
-                <marker date="1552894147680" expanded="false" signature="6:78" ph="..." />
-                <marker date="1552894147680" expanded="true" signature="105:671" ph="{...}" />
-                <marker date="1552894147680" expanded="true" signature="227:430" ph="{...}" />
-                <marker date="1552894147680" expanded="true" signature="473:592" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/GettingGun.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-              <folding>
-                <marker date="1552894168463" expanded="true" signature="6:92" ph="..." />
-                <marker date="1552894168463" expanded="true" signature="126:1291" ph="{...}" />
-                <marker date="1552894168463" expanded="true" signature="366:553" ph="{...}" />
-                <marker date="1552894168463" expanded="true" signature="630:1127" ph="{...}" />
-                <marker date="1552894168463" expanded="true" signature="681:841" ph="{...}" />
-                <marker date="1552894168463" expanded="true" signature="854:1121" ph="{...}" />
-                <marker date="1552894168463" expanded="true" signature="1169:1289" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/EnemySpawner.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-129">
-              <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-              <folding>
-                <marker date="1552892374111" expanded="true" signature="6:78" ph="..." />
-                <marker date="1552892374111" expanded="true" signature="121:1534" ph="{...}" />
-                <marker date="1552892374111" expanded="true" signature="454:557" ph="{...}" />
-                <marker date="1552892374111" expanded="true" signature="602:1006" ph="{...}" />
-                <marker date="1552892374111" expanded="true" signature="651:991" ph="{...}" />
-                <marker date="1552892374111" expanded="true" signature="1043:1389" ph="{...}" />
-                <marker date="1552892374111" expanded="true" signature="1092:1383" ph="{...}" />
-                <marker date="1552892374111" expanded="true" signature="1151:1373" ph="{...}" />
-                <marker date="1552892374111" expanded="true" signature="1439:1532" ph="{...}" />
+                <marker date="1552899851743" expanded="true" signature="52:687" ph="{...}" />
+                <marker date="1552899851743" expanded="true" signature="257:367" ph="{...}" />
+                <marker date="1552899851743" expanded="true" signature="459:523" ph="{...}" />
+                <marker date="1552899851743" expanded="true" signature="552:676" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -166,19 +89,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BossMinions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GoogleVR/Scripts/Headset/GvrHeadset.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GoogleVR/Scripts/Controller/GvrControllerInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GettingGun.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HelperClass.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GoogleVR/Shaders/GvrUnlitTextureOverlay.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossMinions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Demons Attack.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MP5.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -187,15 +105,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/HelperParentClasses.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/GoogleVR/Shaders/GvrUnlitTextureOverlay.shader" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BossMinions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HelperClass.cs" />
-        <option value="$PROJECT_DIR$/Assets/EnemySpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BossMinions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MP5.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GettingGun.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Weapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnemySpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HelperClass.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/BossMinions.cs" />
       </list>
     </option>
   </component>
@@ -264,12 +183,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552826295594</updated>
-      <workItem from="1552826299436" duration="38853000" />
+      <workItem from="1552826299436" duration="40859000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38853000" />
+    <option name="totallyTimeSpent" value="40859000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -603,18 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/HelperClass.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <marker date="1552891334171" expanded="false" signature="6:52" ph="..." />
-            <marker date="1552891334171" expanded="true" signature="86:474" ph="{...}" />
-            <marker date="1552891334171" expanded="true" signature="248:461" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -630,21 +537,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/EnemySpawner.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BossMinions.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-129">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding>
-            <marker date="1552892374111" expanded="true" signature="6:78" ph="..." />
-            <marker date="1552892374111" expanded="true" signature="121:1534" ph="{...}" />
-            <marker date="1552892374111" expanded="true" signature="454:557" ph="{...}" />
-            <marker date="1552892374111" expanded="true" signature="602:1006" ph="{...}" />
-            <marker date="1552892374111" expanded="true" signature="651:991" ph="{...}" />
-            <marker date="1552892374111" expanded="true" signature="1043:1389" ph="{...}" />
-            <marker date="1552892374111" expanded="true" signature="1092:1383" ph="{...}" />
-            <marker date="1552892374111" expanded="true" signature="1151:1373" ph="{...}" />
-            <marker date="1552892374111" expanded="true" signature="1439:1532" ph="{...}" />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Weapon.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="115" column="11" selection-start-line="115" selection-start-column="11" selection-end-line="115" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MP5.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="69" lean-forward="true" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GettingGun.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/HelperClass.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -661,96 +585,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MP5.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="33" />
-          <folding>
-            <marker date="1552894147680" expanded="false" signature="6:78" ph="..." />
-            <marker date="1552894147680" expanded="true" signature="105:671" ph="{...}" />
-            <marker date="1552894147680" expanded="true" signature="227:430" ph="{...}" />
-            <marker date="1552894147680" expanded="true" signature="473:592" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GettingGun.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding>
-            <marker date="1552894168463" expanded="true" signature="6:92" ph="..." />
-            <marker date="1552894168463" expanded="true" signature="126:1291" ph="{...}" />
-            <marker date="1552894168463" expanded="true" signature="366:553" ph="{...}" />
-            <marker date="1552894168463" expanded="true" signature="630:1127" ph="{...}" />
-            <marker date="1552894168463" expanded="true" signature="681:841" ph="{...}" />
-            <marker date="1552894168463" expanded="true" signature="854:1121" ph="{...}" />
-            <marker date="1552894168463" expanded="true" signature="1169:1289" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="33" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="33" />
+        <state relative-caret-position="480">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/EnemySpawner.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
           <folding>
-            <marker date="1552893205632" expanded="true" signature="6:78" ph="..." />
-            <marker date="1552893205632" expanded="true" signature="114:3357" ph="{...}" />
-            <marker date="1552893205632" expanded="true" signature="462:632" ph="{...}" />
-            <marker date="1552893205632" expanded="true" signature="763:928" ph="{...}" />
-            <marker date="1552893205632" expanded="true" signature="956:1097" ph="{...}" />
-            <marker date="1552893205632" expanded="true" signature="1140:1362" ph="{...}" />
-            <marker date="1552893205632" expanded="true" signature="1197:1356" ph="{...}" />
-            <marker date="1552893205632" expanded="true" signature="1308:1346" ph="/* Adding Scrore ... */" />
-            <marker date="1552893205632" expanded="true" signature="1400:2376" ph="{...}" />
-            <marker date="1552893205632" expanded="true" signature="1622:2321" ph="{...}" />
-            <marker date="1552893205632" expanded="true" signature="2416:2460" ph="{...}" />
-            <marker date="1552893205632" expanded="true" signature="2490:2631" ph="{...}" />
-            <marker date="1552893205632" expanded="true" signature="2561:2625" ph="{...}" />
-            <marker date="1552893205632" expanded="true" signature="2683:3104" ph="{...}" />
-            <marker date="1552893205632" expanded="true" signature="2751:3098" ph="{...}" />
-            <marker date="1552893205632" expanded="true" signature="2863:2939" ph="{...}" />
-            <marker date="1552893205632" expanded="true" signature="2970:3055" ph="{...}" />
-            <marker date="1552893205632" expanded="true" signature="3156:3355" ph="{...}" />
-            <marker date="1552893205632" expanded="true" signature="3218:3349" ph="{...}" />
+            <marker date="1552899679241" expanded="true" signature="6:78" ph="..." />
+            <marker date="1552899679241" expanded="true" signature="125:199" ph="/// EnemySpawner Weapon Class ... " />
+            <marker date="1552899679241" expanded="true" signature="242:1750" ph="{...}" />
+            <marker date="1552899679241" expanded="true" signature="616:719" ph="{...}" />
+            <marker date="1552899679241" expanded="true" signature="789:1217" ph="{...}" />
+            <marker date="1552899679241" expanded="true" signature="838:1202" ph="{...}" />
+            <marker date="1552899679241" expanded="true" signature="1259:1605" ph="{...}" />
+            <marker date="1552899679241" expanded="true" signature="1308:1599" ph="{...}" />
+            <marker date="1552899679241" expanded="true" signature="1367:1589" ph="{...}" />
+            <marker date="1552899679241" expanded="true" signature="1655:1748" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/BossMinions.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/BossMinions.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state relative-caret-position="165">
+          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
           <folding>
-            <marker date="1552885959061" expanded="true" signature="52:527" ph="{...}" />
-            <marker date="1552885959061" expanded="true" signature="162:272" ph="{...}" />
-            <marker date="1552885959061" expanded="true" signature="315:380" ph="{...}" />
-            <marker date="1552885959061" expanded="true" signature="420:516" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Weapon.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <marker date="1552894181423" expanded="true" signature="57:3389" ph="{...}" />
-            <marker date="1552894181423" expanded="true" signature="561:682" ph="{...}" />
-            <marker date="1552894181423" expanded="true" signature="863:1033" ph="{...}" />
-            <marker date="1552894181423" expanded="true" signature="1118:1642" ph="{...}" />
-            <marker date="1552894181423" expanded="true" signature="1146:1570" ph="{...}" />
-            <marker date="1552894181423" expanded="true" signature="1369:1539" ph="{...}" />
-            <marker date="1552894181423" expanded="true" signature="1583:1636" ph="{...}" />
-            <marker date="1552894181423" expanded="true" signature="1679:2428" ph="{...}" />
-            <marker date="1552894181423" expanded="true" signature="1739:1943" ph="{...}" />
-            <marker date="1552894181423" expanded="true" signature="1776:1933" ph="{...}" />
-            <marker date="1552894181423" expanded="true" signature="1956:2078" ph="{...}" />
-            <marker date="1552894181423" expanded="true" signature="2088:2422" ph="/* ##if UNITY_ANDROID || UNITY_IOS ... */" />
-            <marker date="1552894181423" expanded="true" signature="2454:2495" ph="{...}" />
-            <marker date="1552894181423" expanded="true" signature="2536:3387" ph="{...}" />
-            <marker date="1552894181423" expanded="true" signature="2601:3381" ph="{...}" />
+            <marker date="1552899851743" expanded="true" signature="52:687" ph="{...}" />
+            <marker date="1552899851743" expanded="true" signature="257:367" ph="{...}" />
+            <marker date="1552899851743" expanded="true" signature="459:523" ph="{...}" />
+            <marker date="1552899851743" expanded="true" signature="552:676" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -5,6 +5,7 @@ public static class HelperClass
 {
    //Adding as much helper functions that may be used
    
+   //Getting Random point within diamater of a circle 
      public static Vector3 RandomLocationWithinCircle(Vector3 center, float minRange, float maxRange)
     {
         var location = Quaternion.AngleAxis(Random.Range(0.0f, 360.0f), Vector3.up) * Vector3.forward;

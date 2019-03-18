@@ -34,3 +34,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+\.idea/\.idea\.vr-test/\.idea/workspace\.xml
