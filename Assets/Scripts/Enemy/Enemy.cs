@@ -5,13 +5,13 @@ public class Enemy : MonoBehaviour
     protected string enemyName; // Enemy Name
     private int health; // Enemy Health
     private int damage; // Enemy Damage
-    private Transform goTransform; // Transfrom so I force enemy to loot at player
+    private Transform goTransform; // Transfrom so I force enemy to look at player
     private Player player; // Reference to player class to do damage once they hit 
     private bool isAttacking; // Checking if Enemy is attacking
-    private Material enemyMaterial;  // Enemy Material which I use to change the glow color based on how tough they are.
+    private Material enemyMaterial; // Enemy Material which I use to change the glow color based on how tough they are.
 
     [HideInInspector] public EnemySpawner Spawner; // Spawner 
-    [HideInInspector] private int defaultHealth; // Storing health to be reset once its recycled through Object pool
+    private int defaultHealth; // Storing health to be reset once its recycled through Object pool
 
 
     protected virtual void Awake()
@@ -40,9 +40,9 @@ public class Enemy : MonoBehaviour
     }
 
     // Receive Damage from player
-    public void ReceiveDamage(int damage)
+    public void ReceiveDamage(int dam)
     {
-        health -= damage;
+        health -= dam;
         if (health <= 0)
         {
             OnDeath();
@@ -54,10 +54,10 @@ public class Enemy : MonoBehaviour
         Spawner.ReturnEnemyToPool(gameObject); // returning to pool
         var level = ScoreManager.scoreManager.LevelDiff; // getting diff level
         health = defaultHealth * level; //resenting health with the new diff level
-       Debug.Log(health);
+        Debug.Log(health);
         // cancel invoking
         CancelInvoke(nameof(DoDamage));
-        
+
         // Setting Emassive color of the enemy based on the diff. level
         switch (level)
         {
@@ -73,11 +73,11 @@ public class Enemy : MonoBehaviour
                 enemyMaterial
                     .SetColor("_ColorEmissive", Color.yellow);
                 break;
-            case 4 : 
+            case 4:
                 enemyMaterial
                     .SetColor("_ColorEmissive", Color.green);
                 break;
-            case 5 : 
+            case 5:
                 enemyMaterial
                     .SetColor("_ColorEmissive", Color.magenta);
                 break;
@@ -86,10 +86,7 @@ public class Enemy : MonoBehaviour
         ScoreManager.scoreManager.Score += 100;
     }
 
-    
-    
-    
-    
+
 // DO Damage is repeatedly invoked when the enemy collide with player
     private void DoDamage()
     {
@@ -123,7 +120,8 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionExit(Collision other)
     {
-        if (other.collider.gameObject.name == "Player") // I would believe it could be another way than comparing two strings . 
+        if (other.collider.gameObject.name == "Player"
+        ) // I would believe it could be another way than comparing two strings . 
         {
             isAttacking = false;
 

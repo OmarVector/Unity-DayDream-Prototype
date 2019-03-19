@@ -1,27 +1,33 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using static HelperClass;
 
 ////////////////////////////////////////////
-/// EnemySpawner Weapon Class
+/// EnemySpawner Class
 /// ////////////////////////////////////////
 
 public class EnemySpawner : MonoBehaviour
 {
-    static int POOLSIZE = 20; // Enemy Pool Size
+    // Enemy Pool Size
+    static int POOLSIZE = 10; // Enemy Pool Size
     
-    [SerializeField] private GameObject EnemyGO; // Enemy Prefab we going to use to instantiate .
-    [HideInInspector] public List<GameObject> EnemyPool; // Enemy Pool List
-    
-    public float SpawningRate = 2.5f; 
+    // Enemy Prefab we going to use to instantiate .
+    [SerializeField] private GameObject EnemyGO;
+    // Enemy Pool List
+    [HideInInspector] public List<GameObject> EnemyPool;
+    //Spawning Rate
+    public float SpawningRate = 1.0f; 
+    // Enemy Basic Initial health
     private int basicHealth = 100;
+    // Enemy basic Initial Damage;
     private int basicDamage = 50;
     
 
+    // Initializing the pool
     private void Awake()
     {
+        float rand = Random.Range(0, 2);
         InitializeEnemyPool();
-        InvokeRepeating("GetEnemyFromPool",0,SpawningRate);
+        InvokeRepeating("GetEnemyFromPool",rand,SpawningRate);
     }
     
 
@@ -30,11 +36,15 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < POOLSIZE; ++i)
         {
-            var go = Instantiate(EnemyGO, transform.position, Quaternion.identity);
-            go.SetActive(false);
-            var GoEnemy = go.GetComponent<Enemy>();
+            
+            GameObject go = Instantiate(EnemyGO, transform.position, Quaternion.identity) ;
+           
+            go.transform.SetParent(transform);
+           Enemy GoEnemy = go.GetComponent<Enemy>();
+           
             GoEnemy.SetEnemyPower(basicHealth,basicDamage,Color.blue, ScoreManager.scoreManager.LevelDiff);
             GoEnemy.Spawner = this;
+            go.SetActive(false);
             EnemyPool.Add(go);
         }
         
@@ -48,7 +58,7 @@ public class EnemySpawner : MonoBehaviour
             if (!EnemyPool[i].activeInHierarchy)
             {
                 var go = EnemyPool[i];
-                go.transform.position = RandomLocationWithinCircle(transform.position, 0, 2); 
+                go.transform.position = HelperClass.RandomLocationWithinCircle(transform.position, 0, 2); 
                 go.SetActive(true);
                 return;
             }

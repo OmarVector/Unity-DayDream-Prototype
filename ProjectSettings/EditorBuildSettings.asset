@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Demons Attack.unity
+    guid: af97f0e205e947646b950c06bf41480b
   m_configObjects: {}

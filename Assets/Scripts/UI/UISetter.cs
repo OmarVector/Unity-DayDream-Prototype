@@ -3,26 +3,28 @@ using UnityEngine.UI;
 
 public class UISetter : MonoBehaviour
 {
-   [SerializeField] private UITheme Theme;
-  
-   [SerializeField] private Image crossHair;
-   [SerializeField] private Image healthBackgroundImage;
-   [SerializeField] private Image healthFillImage;
-   [SerializeField] private Image armorFillImage;
- 
-   [SerializeField] private Image ammoBackgroundImage;
-   [SerializeField] private Image rightWeaponAmmo;
-   [SerializeField] private Image leftWeaponAmmo;
+    [SerializeField] private UITheme Theme;
 
-   private void Awake()
-   {
-      crossHair.sprite = Theme.CrossHair;
-      healthBackgroundImage.sprite = Theme.HealthBackgroundImage;
-      healthFillImage.sprite = Theme.HealthFillImage;
-      armorFillImage.sprite = Theme.ArmorFillImage;
+    public Image crossHair;
+    public Image healthBackgroundImage;
+    public Image healthFillImage;
+    public Image armorFillImage;
 
-      ammoBackgroundImage.sprite = Theme.AmmoBackgroundImage;
-      rightWeaponAmmo.sprite = Theme.RightWeaponAmmo;
-      leftWeaponAmmo.sprite = Theme.LeftWeaponAmmo;
-   }
+    public Image ammoBackgroundImage;
+    public Image rightWeaponAmmo;
+    public Image leftWeaponAmmo;
+
+    public Text totalHealthAmount;
+
+    private void Awake()
+    {
+        crossHair.sprite = Theme.CrossHair;
+        healthBackgroundImage.sprite = Theme.HealthBackgroundImage;
+        healthFillImage.sprite = Theme.HealthFillImage;
+        armorFillImage.sprite = Theme.ArmorFillImage;
+
+        ammoBackgroundImage.sprite = Theme.AmmoBackgroundImage;
+        rightWeaponAmmo.sprite = Theme.RightWeaponAmmo;
+        leftWeaponAmmo.sprite = Theme.LeftWeaponAmmo;
+    }
 }

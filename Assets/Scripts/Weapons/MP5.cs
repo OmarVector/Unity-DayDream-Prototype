@@ -5,23 +5,26 @@
 /// ////////////////////////////////////////
 public class MP5 : Weapon
 {
-    [SerializeField] private ParticleSystem part; // firing particles
+    // firing particles
     // Start is called before the first frame update
-    void Start()
+    protected override void Awake()
     {
-        openFireParticles = part;
+        base.Awake();
         weaponName = "MP5";
         ammoClipSize = 30;
         ammo = ammoClipSize;
         damage = 10;
         fireRate = 0.1f;
         UpgradeCost = 500;
+        reloadingSpeed = 1f;
+       
     }
 
-
-    public override void UpgradeWeapon()
+    protected override void UpgradeWeapon()
     {
+        Debug.Log("MP% Upgrade");
         damage *= 2;
+        reloadingSpeed -= 0.1f;
         ammoClipSize += 5;
         ammo = ammoClipSize;
         base.UpgradeWeapon();

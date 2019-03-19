@@ -20,9 +20,10 @@ public class ScoreManager : MonoBehaviour
         }
      
 
-        DontDestroyOnLoad(gameObject);
+        //Enable while switching level, but since we are only working on one Level, no need for it.
+       // DontDestroyOnLoad(gameObject);
         
-        InvokeRepeating(nameof(LevelDiffUp),20,20);//increase the hardness of the game every 20 sec
+        InvokeRepeating(nameof(LevelDiffUp),10,10);//increase the hardness of the game every 10 sec
     }
     
     

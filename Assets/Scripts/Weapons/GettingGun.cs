@@ -7,30 +7,32 @@
 public class GettingGun : Weapon
 {
     [SerializeField] private Transform gunRotation; // transform to rotate the Getting Gun
-    [SerializeField] private ParticleSystem part; // firing particles
 
     private float rotatingAngle; //  rotation amount
 
     private float lerpAmount;
 
-    // Start is called before the first frame update
-    void Start()
+    protected override void Awake()
     {
+        base.Awake();
         weaponName = "Getting Gun";
         ammoClipSize = 200;
         ammo = ammoClipSize;
         damage = 10;
         fireRate = 0.05f;
-        openFireParticles = part;
+        reloadingSpeed = 4f;
     }
+
+  
 
     // Update is called once per frame
     protected override void Update()
     {
         base.Update();
+       
         
         // Hardcoding rotating animation of the getting gun
-        if (isFiring)
+        if (isFiring && ammo>0)
         {
             lerpAmount = 0;
             rotatingAngle += 20;
@@ -47,11 +49,12 @@ public class GettingGun : Weapon
     }
 
     //Upgrading TODO UI
-    public override void UpgradeWeapon()
+    protected override void UpgradeWeapon()
     {
         damage *= 3;
         ammoClipSize += 20;
         ammo = ammoClipSize;
+        reloadingSpeed -= 0.2f;
         base.UpgradeWeapon();
     }
 }

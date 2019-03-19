@@ -1,25 +1,59 @@
-﻿
+﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
+////////////////////////////////////////////
+/// Weapon Class
+/// ////////////////////////////////////////
 
 public class Weapon : MonoBehaviour
 {
-    protected string weaponName { get; set; } 
-    protected int damage { get; set; }
-    protected int accuracy { get; set; } //Not used but added
-    protected int recoil { get; set; }//Not used but added
-    protected float fireRate { get; set; }
-    protected float reloadSpeed { get; set; }//Not used but added
-    protected int ammoClipSize { get; set; }
-    protected int ammo { get; set; }
+    //Weapon Name
+    protected string weaponName;
+    //Damage 
+    protected int damage;
+    //Accuracy
+    protected int accuracy; //Not used but added
+    // Recoil
+    protected int recoil; //Not used but added
+    // Fire Rate
+    protected float fireRate;
+    // Reloading Speed
+    protected float reloadingSpeed;
+    // Ammo Clip Size
+    public int ammoClipSize;
+    // Ammo
+    public int ammo;
+    // Checking if the weapon is firing or not
     protected bool isFiring;
-    protected int UpgradeCost; // TODO
-    protected ParticleSystem openFireParticles;
-    
+    // Checking if the weapon is reloading or not
+    private bool isReloading;
+    // weapon upgrade cost
+    protected int UpgradeCost; //Not used but added
+   
+    //Weapon material which will change its emission color on each upgrade level
     private Material weaponMat;
-    //to avoid GC
+
+    // Timer variables to start and reset the timer for reloading
+    private float startTime;
+    private float timer;
+
+    //Ray for firing , is global to avoid CG
     private Ray ray;
+    // Raycast hit result of the weapon
     private RaycastHit hit;
+    // PlayerHUD reference to update the ammo amount 
+    private PlayerHUDController playerHUD;
+    //layer mask for ray cast to hi only enemies
+    private int layer_mask;
+    
+    // primitive particles for open fire .
+    [SerializeField] private ParticleSystem openFireParticles;
+    // Reloading Fill image
+    [SerializeField] private Image reloadingFill;
+    // Reloading cavas which will be rendered once the weapon is reloading.
+    [SerializeField] private Canvas reloadingCanvas;
 
 
     // enum power level of the weapon. 
@@ -32,16 +66,23 @@ public class Weapon : MonoBehaviour
         Level_05 = 5
     }
 
-    protected Levels WeaponLevel; // TODO
+    protected Levels WeaponLevel;
 
-    private int layer_mask;
 
-    
-    private void Awake()
+    // Here we assign the layer mask to enemylayer , and getting the weapon material ,
+    // then invoking upgrading weapon so it level up every 30 sec "its hardcoded"
+    protected virtual void Awake()
     {
         layer_mask = LayerMask.GetMask("EnemyLayer");
         weaponMat = gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material;
+      
+        InvokeRepeating(nameof(UpgradeWeapon),30,30);
+    }
 
+    // Getting PlayerHUD
+    private void Start()
+    {
+        playerHUD = GameObject.FindWithTag("HUD").GetComponent<PlayerHUDController>();
     }
 
     // Virtual just if at any case we want to override thie per weapon.
@@ -49,6 +90,8 @@ public class Weapon : MonoBehaviour
     {
         if (ammo > 0)
         {
+            if(!openFireParticles.isPlaying)
+                    openFireParticles.Play();
             //fire ray from center of the screen
             ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
             Debug.DrawRay(ray.origin, ray.direction, Color.green, 5);
@@ -60,24 +103,32 @@ public class Weapon : MonoBehaviour
             }
 
             ammo--;
+            playerHUD.UpdatePlayerHUD();
         }
         else
         {
-            Debug.Log("Reload please"); //TODO Adding UI
+            if (!isReloading)
+            {
+                Debug.Log("Reload please"); //TODO Adding UI
+                openFireParticles.Stop();
+                StartCoroutine(Reload());
+            }
         }
     }
 
-    // OpenFire system "quite primitive" I could make a seprate controller , but it's not necessary at our case here
+    // OpenFire system "quite primitive" I could make a separate controller , but it's not necessary at our case here
     protected virtual void Update()
     {
 #if UNITY_EDITOR
         if (Input.GetMouseButton(0))
         {
-            if (!isFiring)
+            if (!isFiring && ammo >0 )
             {
                 InvokeRepeating("Fire", 0, fireRate);
                 isFiring = true;
-                openFireParticles.Play();
+                
+               openFireParticles.Play();
+               
             }
         }
         else
@@ -86,37 +137,73 @@ public class Weapon : MonoBehaviour
             isFiring = false;
             openFireParticles.Stop();
         }
+
+        if (isReloading)
+        {
+            FillReload();
+        }
+
         return;
 #endif
 
+        // to run on android VR, but I couldn't test it since I've no VR on my end.
 #if UNITY_ANDROID
         if (Input.touchCount > 0)
         {
-            if (!isFiring)
+            if (!isFiring && ammo>0)
             {
                 InvokeRepeating("Fire", 0, fireRate);
                 isFiring = true;
+                
+                openFireParticles.Play();
+               
             }
         }
         else
         {
             CancelInvoke("Fire");
             isFiring = false;
+            openFireParticles.Stop();
         }
+        if (isReloading)
+        {
+            FillReload();
+        }
+
 #endif
     }
 
-    // Reloading //TODO UI Button
-    public void Reload()
+    // Reloading Automatically once the ammo are out.
+    
+    IEnumerator Reload()
     {
+        FillReload();
+        isReloading = true;
+        reloadingCanvas.enabled = true;
+        yield return new WaitForSeconds(reloadingSpeed);
+        reloadingCanvas.enabled = false;
         ammo = ammoClipSize;
+        isReloading = false;
     }
 
-    //TODO Upgrading Weapon UI
-    public virtual void UpgradeWeapon()
+    // Fill animation while reloading, I could use DOTween here, Image.DOFill.
+    private void FillReload()
     {
+        if(!isReloading)
+            startTime = Time.time;
+        
+        timer = Time.time - startTime;
+        reloadingFill.fillAmount = timer / reloadingSpeed;
+        if (reloadingFill.fillAmount > 1)
+            startTime = Time.time;
+    }
+
+    //Automatic Upgrade every 30 sec. 
+    protected virtual void UpgradeWeapon()
+    {
+        
         WeaponLevel++;
-      
+
         switch (WeaponLevel)
         {
             case Levels.Level_01:
@@ -143,6 +230,7 @@ public class Weapon : MonoBehaviour
             case Levels.Level_05:
             {
                 weaponMat.SetColor("_ColorEmissive", Color.magenta);
+                CancelInvoke(nameof(UpgradeWeapon));
                 break;
             }
         }
