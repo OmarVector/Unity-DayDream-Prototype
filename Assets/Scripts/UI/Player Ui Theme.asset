@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dffc38726d262b546a4a22d33eec401f, type: 3}
+  m_Name: Player Ui Theme
+  m_EditorClassIdentifier: 
+  CrossHair: {fileID: 21300000, guid: 97113933789275547bf5c5a0c8eacced, type: 3}
+  HealthBackgroundImage: {fileID: 21300000, guid: e8a6bd7fde7b7a74085a09a52fcb8a1b,
+    type: 3}
+  HealthFillImage: {fileID: 21300000, guid: 94bc430d105690f4281cebf6a20e21d8, type: 3}
+  ArmorFillImage: {fileID: 21300000, guid: 559a8b46c92015c4bb3e1cab47cd3c99, type: 3}
+  AmmoBackgroundImage: {fileID: 21300000, guid: 42c61d6135297964a9afb9d1983aa4af,
+    type: 3}
+  RightWeaponAmmo: {fileID: 21300000, guid: 822c98e1ba2fb4d44a1858703eab94b1, type: 3}
+  LeftWeaponAmmo: {fileID: 21300000, guid: 1c482c7482f530746a25d9a7989534d3, type: 3}

@@ -36,3 +36,5 @@ sysinfo.txt
 *.unitypackage
 
 \.idea/\.idea\.vr-test/\.idea/workspace\.xml
+
+\.idea/\.idea\.vr-test/\.idea/contentModel\.xml
