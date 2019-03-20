@@ -102,6 +102,11 @@ public class Weapon : MonoBehaviour
             {
                 Debug.Log(hit.collider.gameObject.name);
                 hit.collider.gameObject.GetComponent<Enemy>().ReceiveDamage(damage);
+                playerHUD.playerHUD.crossHair.color = Color.red;
+            }
+            else
+            {
+                playerHUD.playerHUD.crossHair.color = Color.white;
             }
 
             ammo--;
@@ -138,6 +143,7 @@ public class Weapon : MonoBehaviour
             CancelInvoke("Fire");
             isFiring = false;
             openFireParticles.Stop();
+            playerHUD.playerHUD.crossHair.color = Color.white;
         }
 
         if (isReloading)
@@ -166,6 +172,7 @@ public class Weapon : MonoBehaviour
             CancelInvoke("Fire");
             isFiring = false;
             openFireParticles.Stop();
+            playerHUD.playerHUD.crossHair.color = Color.white;
         }
         if (isReloading)
         {

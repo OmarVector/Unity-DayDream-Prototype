@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHUDController : MonoBehaviour
 {
     [Header("UI Setter Referece")] [SerializeField]
-    private UISetter playerHUD;
+    [HideInInspector ]public UISetter playerHUD;
 
     [SerializeField] private Player player;
 
