@@ -31,7 +31,7 @@ public class GettingGun : Weapon
         base.Update();
        
         
-        // Hardcoding rotating animation of the getting gun
+        // Hardcoding rotation animation of the getting gun
         if (isFiring && ammo>0)
         {
             lerpAmount = 0;
@@ -47,8 +47,7 @@ public class GettingGun : Weapon
             gunRotation.localRotation = Quaternion.Euler(0, 0, rotatingAngle);
         }
     }
-
-    //Upgrading TODO UI
+    
     protected override void UpgradeWeapon()
     {
         damage *= 3;

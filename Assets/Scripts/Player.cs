@@ -1,19 +1,26 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+////////////////////////////////////////////
+/// Player Class
+/// ////////////////////////////////////////
 public class Player : MonoBehaviour
 {
-    [HideInInspector] public bool isDead;
-    // public for UI , Hardcoded value
+    // Player Health
     public int Health = 200;
+    // Armor Health
     public int Armor = 100;
+    // Canvas that render DEAD when player die
     [SerializeField] private Canvas deathCanvas;
+    // To Check if the player is dead or not
+    [HideInInspector] public bool isDead;
    
    
-
+    // Reference to player HUD Controller.
     private PlayerHUDController playerHUD;
 
+    // We set TimeScale to = 1.0 since when player die the time scale change then we restart the level.
+    // Assigning playerHUD and making sure the deathCanvas is disabled.
     private void Start()
     {
         Time.timeScale = 1.0f;
@@ -21,6 +28,7 @@ public class Player : MonoBehaviour
         playerHUD = GameObject.FindWithTag("HUD").GetComponent<PlayerHUDController>();
     }
 
+    // When player receive damage from Enemy , its called when enemy is overlapping with player .
     public void ReceiveDamage(int damage)
     {
         playerHUD.UpdatePlayerHUD();
@@ -43,11 +51,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    // When player die
     private IEnumerator OnPlayerDeath()
     {
-        Time.timeScale = 0.2f;
+        
+        Time.timeScale = 0.1f;
         deathCanvas.enabled = true;
         yield return new WaitForSeconds(0.5f);
+        ScoreManager.scoreManager.ResetDifficulty();
         SceneManager.LoadScene(0);
 
 

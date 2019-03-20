@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
 
-
+////////////////////////////////////////////
+/// ScoreManager Class SingleTone.
+/// ////////////////////////////////////////
 public class ScoreManager : MonoBehaviour
 {
+    // static scoremanger to ensure its single tone.
     public static ScoreManager scoreManager;
     
+    // Score
     [HideInInspector] public int Score; // with this points, we can upgrade weapons later on
 
+    // Level Difficulty 
     [HideInInspector] public int LevelDiff = 1;
 
-    
+    // Initializing Single Tone.
     private void Awake()
     {
         if (scoreManager == null)
@@ -18,10 +23,8 @@ public class ScoreManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-     
-
-        //Enable while switching level, but since we are only working on one Level, no need for it.
-       // DontDestroyOnLoad(gameObject);
+        
+       DontDestroyOnLoad(gameObject); 
         
         InvokeRepeating(nameof(LevelDiffUp),10,10);//increase the hardness of the game every 10 sec
     }
@@ -30,6 +33,11 @@ public class ScoreManager : MonoBehaviour
     private void LevelDiffUp()
     {
         LevelDiff++;
+    }
+
+    public void ResetDifficulty()
+    {
+        LevelDiff = 1;
     }
 
 }

@@ -22,10 +22,10 @@ public class EnemySpawner : MonoBehaviour
     private int basicDamage = 50;
     
 
-    // Initializing the pool
+    // Initializing the pool and making starting spawning in random time range.
     private void Awake()
     {
-        float rand = Random.Range(0, 2);
+        float rand = Random.Range(0, 4);
         InitializeEnemyPool();
         InvokeRepeating("GetEnemyFromPool",rand,SpawningRate);
     }
@@ -40,7 +40,7 @@ public class EnemySpawner : MonoBehaviour
             GameObject go = Instantiate(EnemyGO, transform.position, Quaternion.identity) ;
            
             go.transform.SetParent(transform);
-           Enemy GoEnemy = go.GetComponent<Enemy>();
+            Enemy GoEnemy = go.GetComponent<Enemy>();
            
             GoEnemy.SetEnemyPower(basicHealth,basicDamage,Color.blue, ScoreManager.scoreManager.LevelDiff);
             GoEnemy.Spawner = this;
@@ -51,6 +51,7 @@ public class EnemySpawner : MonoBehaviour
     }
 
     
+    // Getting Enemy from the pool
     private void GetEnemyFromPool()
     {
         for (int i = 0; i < POOLSIZE; ++i)
@@ -65,6 +66,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    // Recycling enemy
     public void ReturnEnemyToPool(GameObject go)
     {
         go.SetActive(false);

@@ -15,16 +15,12 @@ public class PlayerHUDController : MonoBehaviour
 
     private int initialHealth;
     private int initialArmor;
-    private float initialAmmoG_R;
-    private float initialAmmoG_L;
 
     // Start is called before the first frame update
     void Start()
     {
         initialHealth = player.Health;
         initialArmor = player.Armor;
-        initialAmmoG_R = Gun_R.ammoClipSize;
-        initialAmmoG_L = Gun_L.ammoClipSize;
        
 
         UpdatePlayerHUD();
@@ -34,9 +30,9 @@ public class PlayerHUDController : MonoBehaviour
     {
         playerHUD.healthFillImage.fillAmount = (float) player.Health / initialHealth;
         playerHUD.armorFillImage.fillAmount = (float) player.Armor / initialArmor;
-        
-        playerHUD.rightWeaponAmmo.fillAmount =  Gun_R.ammo / initialAmmoG_R;
-        playerHUD.leftWeaponAmmo.fillAmount =  Gun_L.ammo / initialAmmoG_L;
+       
+        playerHUD.rightWeaponAmmo.fillAmount = (float) Gun_R.ammo / Gun_R.ammoClipSize;
+        playerHUD.leftWeaponAmmo.fillAmount =  (float) Gun_L.ammo / Gun_L.ammoClipSize;
 
         playerHUD.totalHealthAmount.text = (player.Armor + player.Health).ToString();
     }

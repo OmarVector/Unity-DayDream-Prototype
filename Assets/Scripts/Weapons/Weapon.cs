@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
 ////////////////////////////////////////////
-/// Weapon Class
+/// Weapon Parent Class
 /// ////////////////////////////////////////
 
 public class Weapon : MonoBehaviour
@@ -75,6 +75,7 @@ public class Weapon : MonoBehaviour
     {
         layer_mask = LayerMask.GetMask("EnemyLayer");
         weaponMat = gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material;
+        
       
         InvokeRepeating(nameof(UpgradeWeapon),30,30);
     }
@@ -83,6 +84,7 @@ public class Weapon : MonoBehaviour
     private void Start()
     {
         playerHUD = GameObject.FindWithTag("HUD").GetComponent<PlayerHUDController>();
+        playerHUD.UpdatePlayerHUD();
     }
 
     // Virtual just if at any case we want to override thie per weapon.
@@ -183,6 +185,7 @@ public class Weapon : MonoBehaviour
         yield return new WaitForSeconds(reloadingSpeed);
         reloadingCanvas.enabled = false;
         ammo = ammoClipSize;
+        playerHUD.UpdatePlayerHUD();
         isReloading = false;
     }
 
@@ -203,7 +206,7 @@ public class Weapon : MonoBehaviour
     {
         
         WeaponLevel++;
-
+       
         switch (WeaponLevel)
         {
             case Levels.Level_01:

@@ -545,7 +545,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &327313699
 GameObject:
@@ -863,7 +863,7 @@ PrefabInstance:
     - target: {fileID: 4291877714825312601, guid: ede873128f80d994f910026d5340f959,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4291877714825312601, guid: ede873128f80d994f910026d5340f959,
         type: 3}
@@ -1306,7 +1306,7 @@ PrefabInstance:
     - target: {fileID: 4291877714825312601, guid: ede873128f80d994f910026d5340f959,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4291877714825312601, guid: ede873128f80d994f910026d5340f959,
         type: 3}
@@ -1427,7 +1427,7 @@ PrefabInstance:
     - target: {fileID: 3267180413430923132, guid: f4d0a47f0aec9984db78f7f5fc5961f0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3267180413430923132, guid: f4d0a47f0aec9984db78f7f5fc5961f0,
         type: 3}
@@ -1635,10 +1635,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21cc606b48e92984180f16c9fd96ff1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDead: 0
   Health: 200
   Armor: 100
   deathCanvas: {fileID: 637432632}
+  isDead: 0
 --- !u!1001 &946975180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4028,7 +4028,7 @@ PrefabInstance:
     - target: {fileID: 4291877714825312601, guid: ede873128f80d994f910026d5340f959,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4291877714825312601, guid: ede873128f80d994f910026d5340f959,
         type: 3}

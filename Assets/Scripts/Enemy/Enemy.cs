@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 
+////////////////////////////////////////////
+/// Enemy Parent Class
+/// ////////////////////////////////////////
+
 public class Enemy : MonoBehaviour
 {
     protected string enemyName; // Enemy Name
@@ -54,7 +58,7 @@ public class Enemy : MonoBehaviour
         Spawner.ReturnEnemyToPool(gameObject); // returning to pool
         var level = ScoreManager.scoreManager.LevelDiff; // getting diff level
         health = defaultHealth * level; //resenting health with the new diff level
-        Debug.Log(health);
+       
         // cancel invoking
         CancelInvoke(nameof(DoDamage));
 
