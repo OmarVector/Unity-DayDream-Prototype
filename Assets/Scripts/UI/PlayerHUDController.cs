@@ -28,12 +28,13 @@ public class PlayerHUDController : MonoBehaviour
 
     public void UpdatePlayerHUD()
     {
-        playerHUD.healthFillImage.fillAmount = (float) player.Health / initialHealth;
-        playerHUD.armorFillImage.fillAmount = (float) player.Armor / initialArmor;
+        playerHUD.HealthFillImage.fillAmount = (float) player.Health / initialHealth;
+        playerHUD.ArmorFillImage.fillAmount = (float) player.Armor / initialArmor;
        
-        playerHUD.rightWeaponAmmo.fillAmount = (float) Gun_R.ammo / Gun_R.ammoClipSize;
-        playerHUD.leftWeaponAmmo.fillAmount =  (float) Gun_L.ammo / Gun_L.ammoClipSize;
+        playerHUD.RightWeaponAmmo.fillAmount = (float) Gun_R.ammo / Gun_R.ammoClipSize;
+        playerHUD.LeftWeaponAmmo.fillAmount =  (float) Gun_L.ammo / Gun_L.ammoClipSize;
 
-        playerHUD.totalHealthAmount.text = (player.Armor + player.Health).ToString();
+        playerHUD.TotalHealthAmount.text = (player.Armor + player.Health).ToString();
+        playerHUD.Score.text = "Score : " + ScoreManager.scoreManager.Score;
     }
 }

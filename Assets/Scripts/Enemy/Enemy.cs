@@ -16,13 +16,18 @@ public class Enemy : MonoBehaviour
 
     [HideInInspector] public EnemySpawner Spawner; // Spawner 
     private int defaultHealth; // Storing health to be reset once its recycled through Object pool
-
+    private PlayerHUDController playerHUD; // To update the score
 
     protected virtual void Awake()
     {
         // Caching
         goTransform = gameObject.transform;
         enemyMaterial = gameObject.transform.GetChild(0).gameObject.GetComponent<SkinnedMeshRenderer>().material;
+    }
+
+    private void Start()
+    {
+        playerHUD = GameObject.FindWithTag("HUD").GetComponent<PlayerHUDController>();
     }
 
 
@@ -58,9 +63,12 @@ public class Enemy : MonoBehaviour
         Spawner.ReturnEnemyToPool(gameObject); // returning to pool
         var level = ScoreManager.scoreManager.LevelDiff; // getting diff level
         health = defaultHealth * level; //resenting health with the new diff level
-       
+        
         // cancel invoking
         CancelInvoke(nameof(DoDamage));
+        
+        //UpdatingScore
+        playerHUD.UpdatePlayerHUD();
 
         // Setting Emassive color of the enemy based on the diff. level
         switch (level)

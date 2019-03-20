@@ -5,26 +5,27 @@ public class UISetter : MonoBehaviour
 {
     [SerializeField] private UITheme Theme;
 
-    public Image crossHair;
-    public Image healthBackgroundImage;
-    public Image healthFillImage;
-    public Image armorFillImage;
+    public Image CrossHair;
+    public Image HealthBackgroundImage;
+    public Image HealthFillImage;
+    public Image ArmorFillImage;
 
-    public Image ammoBackgroundImage;
-    public Image rightWeaponAmmo;
-    public Image leftWeaponAmmo;
+    public Image AmmoBackgroundImage;
+    public Image RightWeaponAmmo;
+    public Image LeftWeaponAmmo;
 
-    public Text totalHealthAmount;
+    public Text TotalHealthAmount;
+    public Text Score;
 
     private void Awake()
     {
-        crossHair.sprite = Theme.CrossHair;
-        healthBackgroundImage.sprite = Theme.HealthBackgroundImage;
-        healthFillImage.sprite = Theme.HealthFillImage;
-        armorFillImage.sprite = Theme.ArmorFillImage;
+        CrossHair.sprite = Theme.CrossHair;
+        HealthBackgroundImage.sprite = Theme.HealthBackgroundImage;
+        HealthFillImage.sprite = Theme.HealthFillImage;
+        ArmorFillImage.sprite = Theme.ArmorFillImage;
 
-        ammoBackgroundImage.sprite = Theme.AmmoBackgroundImage;
-        rightWeaponAmmo.sprite = Theme.RightWeaponAmmo;
-        leftWeaponAmmo.sprite = Theme.LeftWeaponAmmo;
+        AmmoBackgroundImage.sprite = Theme.AmmoBackgroundImage;
+        RightWeaponAmmo.sprite = Theme.RightWeaponAmmo;
+        LeftWeaponAmmo.sprite = Theme.LeftWeaponAmmo;
     }
 }

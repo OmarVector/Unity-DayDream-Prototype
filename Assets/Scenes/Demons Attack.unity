@@ -1122,6 +1122,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597269983}
   m_CullTransparentMesh: 0
+--- !u!1 &622843169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 622843170}
+  - component: {fileID: 622843172}
+  - component: {fileID: 622843171}
+  m_Layer: 5
+  m_Name: Score Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &622843170
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622843169}
+  m_LocalRotation: {x: 0.9592906, y: -0, z: -0.28242105, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -0.002896592, y: -0.002896592, z: -0.002896592}
+  m_Children: []
+  m_Father: {fileID: 1279122797}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 180, y: 32.809998, z: -0.000015258789}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.503, y: 0.285}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &622843171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622843169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0.980212, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 15
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Score : '
+--- !u!222 &622843172
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622843169}
+  m_CullTransparentMesh: 0
 --- !u!1 &637432631
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,6 +2668,7 @@ RectTransform:
   - {fileID: 1396037466}
   - {fileID: 1905283399}
   - {fileID: 2127556816}
+  - {fileID: 622843170}
   m_Father: {fileID: 959308593}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2610,14 +2690,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Theme: {fileID: 11400000, guid: fed3e89ee8d1b704a958a870955ec8d8, type: 2}
-  crossHair: {fileID: 1396037467}
-  healthBackgroundImage: {fileID: 1905283400}
-  healthFillImage: {fileID: 1447403853}
-  armorFillImage: {fileID: 597269985}
-  ammoBackgroundImage: {fileID: 2127556817}
-  rightWeaponAmmo: {fileID: 2133822270}
-  leftWeaponAmmo: {fileID: 1711991274}
-  totalHealthAmount: {fileID: 999323959}
+  CrossHair: {fileID: 1396037467}
+  HealthBackgroundImage: {fileID: 1905283400}
+  HealthFillImage: {fileID: 1447403853}
+  ArmorFillImage: {fileID: 597269985}
+  AmmoBackgroundImage: {fileID: 2127556817}
+  RightWeaponAmmo: {fileID: 2133822270}
+  LeftWeaponAmmo: {fileID: 1711991274}
+  TotalHealthAmount: {fileID: 999323959}
+  Score: {fileID: 622843171}
 --- !u!114 &1279122799
 MonoBehaviour:
   m_ObjectHideFlags: 0
