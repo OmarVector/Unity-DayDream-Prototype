@@ -126,7 +126,14 @@ public class Weapon : MonoBehaviour
     // OpenFire system "quite primitive" I could make a separate controller , but it's not necessary at our case here
     protected virtual void Update()
     {
+        if (ammo <= 0 && !isReloading)
+        {
+            StartCoroutine(Reload());
+            return;
+        }
+        
 #if UNITY_EDITOR
+       
         if (Input.GetMouseButton(0))
         {
             if (!isFiring && ammo >0 )
