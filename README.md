@@ -15,13 +15,13 @@ Daydream Shooter game prototype
 	- Core features and properties for weapons  
 5. BossMinion Class : 
 	- Inherit from Enemy Class
-	- Ading some custom behavior for this type of enemy
+	- Adding some custom behavior for this type of enemy
 6. MP5 Class : 
 	- Inherit from Weapon Class
 	- Adding some custom properties for MP5 weapon itself.
 7. GettingGun :
 	- Inherit from Weapon Class
-	- Adding some custom properties for GettingGunu weapon itself.
+	- Adding some custom properties for GettingGun weapon itself.
 8. PlayerHUDController :
 	- It update the UI when any changes take place.
 9. UISetter :
@@ -43,15 +43,15 @@ Daydream Shooter game prototype
 1. Download the project
 2. Open it with unity
 3. Press play and follow the emulator instruction which is :
-	- Alt+ moving mouse you can rotate your head
-	- Shit + Moving Mouse getting the controller itself "quite confusing"
+	- Alt + moving mouse you can rotate your head
+	- Shift + Moving Mouse getting the controller itself "quite confusing"
 	- Ctrl + Moving Mouse benting your head left and right.
-4. Or Connect your deveice and build the game . " Not Tested
+4. Or Connect your device and build the game . " Not Tested
 
 ###### Game Rules :
 
-1. You have to weapons active and firing at same time .
-2. There is Spawned enemies will walk toward you and you must shoot them before they hit you .
+1. You have two weapons active and firing at same time .
+2. There are Spawned enemies will walk toward you and you must shoot them before they hit you .
 3. Enemies will become harder with time , each 10 seconds they will become tougher , you can check their Eye color .
 4. Guns will be upgraded automatically every 30 seconds .
 5. If you die the game will restart in short time .
