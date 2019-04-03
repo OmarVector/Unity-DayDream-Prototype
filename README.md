@@ -1,4 +1,4 @@
-# VR Test
+# VR Demo
 
 Daydream Shooter game prototype
 
